@@ -34,6 +34,7 @@ app.post('/send', (req,res) => {
       { topic: req.body.topic, messages:sentMessage , partition: 0 }
   ];
   console.log("Incoming message");
+  console.log(payload)
   producer.send(payload, (err, data) => {
           res.json(data);
   });
