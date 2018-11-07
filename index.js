@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 const Producer = kafka.Producer
 const client = new kafka.KafkaClient({kafkaHost: 'localhost:9092'})
-console.log(client)
 const producer = new Producer(client)
 
 producer.on('ready',  () => {
